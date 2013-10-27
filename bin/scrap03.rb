@@ -1,10 +1,15 @@
 require 'data_mapper'
+require 'dm-migrations'
+
+
 require 'capybara'
 require 'capybara/dsl'
 include Capybara::DSL
 
 Capybara.current_driver = :selenium
 Capybara.app_host = 'http://www.hasbro.com'
+
+
 
 
 class Token
@@ -17,6 +22,9 @@ class Token
   property :definition,   String
   property :created_at,   DateTime  # A DateTime, for any date you might like.
 end
+
+
+
 
 class WordSearchResults
   attr_accessor :complete, :word, :definition, :points
@@ -97,8 +105,28 @@ end
 
 def setup_db!
   # A Sqlite3 connection to a persistent database
-  DataMapper.setup(:default, 'sqlite://db/official_scraper.db')
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/official_scraper.db")
+  
+  DataMapper.finalize
+  DataMapper.auto_migrate!
+  
 end
 
+def search_and_save(token)
+  word_search_results = search_for(token)
+  if (word_search_results.word?)
+    Token.create(
+      :token_string => token,
+      :is_word => true,
+      :points => word_search_results.points,
+      :definition => word_search_results.definition
+    )
+  else
+    Token.create(
+      :token_string => token,
+      :is_word => false
+    )
+  end
+end
 # perform_sample_searches!
 setup_db!
