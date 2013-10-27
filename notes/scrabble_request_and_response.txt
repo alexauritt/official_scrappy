@@ -1,0 +1,658 @@
+"http://www.hasbro.com/scrabble/en_US/search.cfm"
+
+REQUEST:
+
+Request URL:http://www.hasbro.com/scrabble/en_US/search.cfm
+Request Method:POST
+Status Code:200 OK
+Request Headersview source
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip,deflate,sdch
+Accept-Language:en-US,en;q=0.8
+Connection:keep-alive
+Content-Length:23
+Content-Type:application/x-www-form-urlencoded
+Cookie:CFID=27763161; CFTOKEN=70454726; s_cc=true; s_vi=[CS]v1|2935F4C685163468-60000181E003ECD1[CE]; xglsgg=US; s_hasbro games: scrabble=1382884662330-New; s_sq=hasbroscrabble-us%2Chasbroglobal%3D%2526pid%253Dscrabble%25253Aus%25253Asearch%252520results%2526pidt%253D1%2526oid%253Dfunctiononclick(event)%25257Bdocument.frmDict1.submit()%25253B%25257D%2526oidt%253D2%2526ot%253DIMAGE
+Host:www.hasbro.com
+Origin:http://www.hasbro.com
+Referer:http://www.hasbro.com/scrabble/en_US/search.cfm
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+Form Dataview sourceview URL encoded
+dictWord:ugly
+exact:Yes
+Response Headersview source
+Connection:keep-alive
+Content-Encoding:gzip
+Content-Length:7152
+Content-Type:text/html; charset=UTF-8
+Date:Sun, 27 Oct 2013 14:37:38 GMT
+Server:Apache/2.2.22 (Win64) JRun/4.0
+Set-Cookie:CFID=27763161; HttpOnly;expires=Wed, 06-Nov-2013 14:37:38 GMT;path=/
+Set-Cookie:CFTOKEN=70454726; HttpOnly;expires=Wed, 06-Nov-2013 14:37:38 GMT;path=/
+Set-Cookie:xglsgg=US; expires=Sun, 27-Oct-2013 16:37:38 GMT; path=/
+Vary:Accept-Encoding
+
+----
+RESPONSE:
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> <!-- Content Copyright Hasbro -->
+<!-- Page generated 2013-10-27 10:37:38 by CommonSpot Build 7.0.0.202 (2012-04-03 15:04:22) -->
+<!-- JavaScript & DHTML Code Copyright &copy; 1998-2012 PaperThin, Inc.  All rights reserved --> <head><script type="text/javascript" src="/CFIDE/scripts/cfform.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/masks.js"></script>
+ <title>Official SCRABBLE Players Dictionary, 4th Edition.</title> <meta name="Description" id="Description" content="Official SCRABBLE Players Dictionary, 4th Edition." />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Keywords" id="Keywords" content="" />
+<meta name="Generator" id="Generator" content="CommonSpot Content Server Build 7.0.0.202" />
+
+<link rel="stylesheet" href="/scrabble/style/global.css" type="text/css" />
+<link rel="stylesheet" href="/scrabble/style/generic.css" type="text/css" />
+<link rel="stylesheet" href="/scrabble/style/homepage.css" type="text/css" />
+<style type="text/css">
+	.mw { color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none; }
+	a.mw:link	{color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+	a.mw:visited	{color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+	a.mw:hover	{color:#0000FF;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+</style> <script type="text/javascript">
+<!--
+	var gMenuControlID = 0;
+	var menus_included = 0;
+	var jsDlgLoader = '/scrabble/en_US/loader.cfm';
+	var jsSiteID = 32;
+	var jsSubSiteID = 2;
+	var js_gvPageID = 1655;
+	var jsPageID = 1655;
+	var jsPageSetID = 0;
+	var jsPageType = 0;
+	var jsControlsWithRenderHandlers = ",1328,1328,1328,1328,1328,1328,1328,1328,1328,1328,1573,2006,2006,2813,";
+	var jsDefaultRenderHandlerProps = ",,";
+	var jsAuthorizedControls = ",1,2,3,4,6,7,8,9,10,11,16,18,20,21,22,23,25,26,27,28,29,30,31,34,36,39,40,41,42,43,44,45,46,47,50,51,52,53,54,1328,1573,2006,2813,";
+	var jsCustomRenderHandlerPairs = "";
+	var jsStandardRenderHandlers = "";
+	var jsSiteSecurityCreateControls = 0;
+	var jsShowRejectForApprover = 1;
+
+// -->
+</script><script type="text/javascript" src="/commonspot/javascript/browser-all.js"></script> 
+	<meta name="ROBOTS" content="NOODP,NOARCHIVE">
+	
+	<script type="text/javascript" language="javascript" src="/includes/js/add_locale_body.js"></script>
+
+<script>	
+		if (typeof jQuery != 'undefined') {
+			jQuery.noConflict();
+		}
+	
+	</script>
+
+<script language="javascript" type="text/javascript" src="/includes/js/lib/basic.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/lib/mootools-release-1.11_comp.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/lib/swfobject.js"></script>
+
+  
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script src="/includes/js/jquery.getParams.js"></script>
+	<script src="/includes/js/jquery.formatCurrency-1.4.0.js"></script>
+	<script src="/includes/js/lib/jquery.alphanumeric.js"></script>
+	<script src="/includes/js/jquery.cookie.js"></script>    
+	<script src="/includes/js/lib/jquery-ui-1.8.16.custom.min.js"></script>
+	<script src="/includes/js/lib/jquery.xdomainajax.js"></script>    
+
+
+<script language="javascript" type="text/javascript" src="/includes/js/Hasbro.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/Hasbro.Utility.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/Hasbro.SearchBox.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/Hasbro.RoundedCorners.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/Hasbro.SlideNav.js"></script>
+
+<script language="javascript" type="text/javascript" src="/includes/js/Hasbro.Carousel.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/Hasbro.Overlay.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/Hasbro.ImageView.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/pngFix.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/mediabox72.js"></script>
+<link href="/includes/css/mediabox.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+	//<![CDATA[
+	Hasbro.Site = {
+		start : function() {
+			new Hasbro.IE6Flicker();		
+			new Hasbro.Overlay($('hsb_header'), {hasDropShadow : true});
+			new Hasbro.SearchBox('hsb_search_input');
+			//new Hasbro.Rollover();
+			try{new Hasbro.ImageView('hsb_iv', {loop : true, hasArrowTrigger : true, autoPlay : {enabled : true}});}catch(e){}
+			new Hasbro.RoundedCorners('.hsb_nav_overlay');
+			new Hasbro.RoundedCorners('.hsb_drop_shadow_container');
+			   
+		}
+	}
+	window.addEvent('domready', Hasbro.Site.start);
+	//]]>
+</script>
+
+
+
+<link rel="stylesheet" href="/commonspot/commonspot.css" type="text/css" id="cs_maincss" /> <script type="text/javascript">
+<!--
+    _CF_checkfrmDict1 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<script type="text/javascript">
+<!--
+    _CF_checkfrmWord1 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head><body lang="en" class="CS_Document"><a name="__topdoc__"></a><script src="/commonspot/pagemode/always-include-common.js" type="text/javascript"></script><script src="/commonspot/pagemode/always-include-ns.js" type="text/javascript"></script> 
+	
+	<script language="javascript" type="text/javascript">
+		
+			var site_account="hasbroscrabble-us,hasbroglobal";
+		
+	</script>
+	
+	<script language="JavaScript" type="text/javascript" src="/includes/js/metrics/2011/s_code.js"></script>
+	
+	<script language="JavaScript" type="text/javascript" src="/includes/js/metrics/2011/metrics.helper.min.js"></script>
+	
+	<script language="javascript" type="text/javascript">	
+		if (typeof jQuery != 'undefined') {
+			jQuery.noConflict();
+		}
+	
+	</script>
+	
+	
+	
+	
+	
+	<script language="javascript" type="text/javascript">	
+    
+	s.pageName = "scrabble:us:search results";
+	
+	if (s.channel == null || s.channel == '') { 
+		s.channel = "scrabble:search";
+	}
+	
+	s.prop1="hasbro games: scrabble";
+	
+	s.prop6 = "Anonymous"; 
+	s.prop7=""
+	s.prop12="scrabble"
+    
+	s.prop15="search results page"
+	
+	s.prop47="us";
+    
+	s.hier1="search:results";
+	
+	s.events="event13";
+	
+   	</script>
+	
+
+	<script src="http://www.google.com/jsapi?key=AIzaSyBjk4UH5GQa-dTp_YgxuFIpQkL1vUKXEE0"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+	<script src="http://www.google.com/jsapi"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/googleapis/0.0.4/googleapis.min.js"></script>
+	<script src="/includes/js/wheretobuy.js"></script>
+	<script src="/scrabble/js/scrabble.js"></script>
+	<link href="/includes/css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+	<link href="/includes/css/wheretobuy.css" rel="stylesheet" />
+	<link href="/scrabble/style/wtb_modal.css" rel="stylesheet" />	
+
+
+<div id="brandhome">
+	<div id="hsb_container">
+		<div id="hsb_header">
+
+			<div id="hsb_logo"> <a href="http://www.hasbro.com/"><img title="Hasbro" alt="Hasbro" src="/scrabble/images/generic/hdr/logo.gif"/></a> </div>
+			<ul id="hsb_globalnav">
+				<li class="hsb_gn_item hsb_gn_select">US</li>
+				<li class="hsb_gn_item">|</li>
+				<li class="hsb_gn_item"><a class="hsb_gn_ww" href="">WORLDWIDE</a></li>
+			</ul>
+			<div id="hsb_search">
+				<form action="/hasbro/search.cfm" id="hsb_search_form">
+					<fieldset>
+						<legend>Search Form</legend>
+						<input type="image" alt="Search" class="hsb_search_button" name="search_button" src="/scrabble/images/generic/hdr/srch_btn.gif" tabindex="7"/>
+						<div class="hsb_search_input_outer">
+							<input type="text" value="Search for products, games and news" id="hsb_search_input" name="search_input" tabindex="8"/>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+
+			<div id="hsb_topnav">
+				
+  <ul class="hsb_nav_triggers">
+    <li><a href="http://www.hasbrotoyshop.com/scrabble-brand" target="_blank" class="hsb_ol_trigger_shop"><span class="shopDrop">Shop</span></a>		</li>
+    <li><a href="/play/" class="hsb_ol_trigger_play"><span class="playDrop">Play</span></a></li>
+    
+    <li><a href="/discover/" class="hsb_ol_trigger_discover"><span class="discDrop">Discover</span></a></li>
+    
+    <li class="sub"><a href="/customer-service/" class="hsb_ol_trigger_customer"><span class="custDrop">Customer Service</span></a></li>
+   
+    <li class="last sub"><a href="/corporate/" class="hsb_ol_trigger_corporate"><span class="corpDrop">Corporate</span></a></li>
+  </ul>
+
+			</div>
+			<ul id="hsb_brand_breadcrumb"> 
+
+<li><a href="http://www.hasbro.com">HASBRO</a> ></li>
+<li><a href="http://www.hasbro.com/games/">HASBRO GAMES</a> ></li>
+<li><a href="/scrabble/en_US/">SCRABBLE</a> ></li>
+
+ </ul>
+
+			<div id="hsb_brand_hdr"> <a href="/scrabble/en_US/index.cfm"><img height="98" width="296" title="SCRABBLE" id="hsb_brand_hdr_logo" name="hsb_brand_hdr_logo" alt="SCRABBLE" src="/scrabble/images/generic/hdr/brand_hdr_logo-trans.png"/></a> </div>
+
+		</div> 
+
+		<div id="hsb_content">
+			
+<div id="hsb_hero_wrapper">
+	<div id="hsb_nav_hero_top"></div>
+	
+	<div id="hsb_brand_nav_container">
+		<ul id="hsb_brand_nav">
+			<li><a href="/scrabble/en_US/index.cfm">Home</a></li>
+  			<li><a href="/scrabble/en_US/shop/browse.cfm">See all SCRABBLE Products</a></li>
+  			<li><a href="/scrabble/en_US/aboutScrabble.cfm">About SCRABBLE</a></li>
+  			<li><a href="/scrabble/en_US/tips.cfm">Tips & Tools</a></li>
+  			<li><a href="/scrabble/en_US/nsa.cfm">Get Involved with SCRABBLE</a></li>
+  			<li><a href="/scrabble/en_US/school.cfm">School SCRABBLE Program</a></li>
+  			<li><a href="/scrabble/en_US/faq.cfm">FAQs</a></li>
+  			<li><a href="/scrabble/en_US/fun.cfm">Word of the Day</a></li>
+			
+  			<li><a href="http://www.hasbrotoyshop.com/scrabble-brand" target="_blank">Shop</a></li>
+  			<li class="hsb_last"><a href="http://reg.hasbro.com/registration/scrabble/" target="_blank.html">E-mail Updates</a></li>
+		</ul>
+		<div id="hsb_brand_nav_bottom"></div>
+	</div>
+
+
+    <div id="hsb_brand_hero_container">
+		
+		
+            <div id="cs_control_2823" class=""> <div  class="CS_Element_Schedule"  title="" id="CS_Element_homeBrandStatement" > 
+<a name="custom2844" id="custom2844"></a><a name="CP_JUMP_2844" id="CP_JUMP_2844"></a><div id="cs_control_2844" class="cs_control CS_Element_Custom"> 
+    <div id="flash_content">
+      <div id="get_flash">
+        <h4>You must have the current version of Flash Player in order to view this content. Please use following link to install.</h4>
+        <a href='http://www.adobe.com/go/getflashplayer' target='_blank'><img src='http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player'></a></div>
+    </div>
+    
+		<script type="text/javascript">
+			// <![CDATA[
+			
+			var flashvars = {};
+			
+				flashvars.LOCALE = 'en_US';
+			
+			var params = {
+			  menu: "false"
+			  ,bgcolor:"#FFF"
+			  ,quality:"high"
+			  ,wmode:"transparent"
+			  ,align:"middle"
+			  ,allowfullscreen:"true"
+			  ,allowScriptAccess:"Always"
+			  ,base:"/commonspot_sites/localize_promos/brand_statement_2011/scrabble/en_US/2//1655/brand_statement/"
+			};
+			
+			var attributes = {
+			id: "flash_content",
+			name: "flash_content"
+			};
+
+			swfobject.embedSWF("/commonspot_sites/localize_promos/brand_statement_2011/scrabble/en_US/2/1655/brand_statement/application.swf", "flash_content", "710", "455", "9.0.124", "/common/swf/expressInstall.swf",flashvars,params,attributes);
+			
+			// ]]>
+		</script>
+	</div> 
+</div> </div> 
+            
+
+		<div id="scrabble_search">
+
+			
+
+			<div class="box">
+			<p>SCRABBLE Dictionary</p>
+			<form name="frmDict1" id="frmDict1" action="/scrabble/en_US/search.cfm" method="post" onsubmit="return _CF_checkfrmDict1(this)">
+				<div class="fillcontent">
+					<input name="dictWord" type="text" value="ugly" onfocus="select(this);"  id="dictWord"  class="field"  /> <input name="exact" id="exact"  type="checkbox" value="Yes" checked="checked"  /> Exact matches only
+				</div>
+				<div class="gohint">
+					<input name="btn_search" id="btn_search"  type="image" onclick="document.frmDict1.submit();"  class="searchbutton"  src="/scrabble/images/generic/brand/btn_go.gif"  />
+					<a href="javascript:basicPopup('/scrabble/en_US/dictionaryHints.html','350','550','20','20');">Hints</a>
+				</div>
+			</form>
+
+		</div>
+		<div class="box right">
+
+			
+			
+
+			<p>SCRABBLE Word Builder</p>
+			<form name="frmWord1" id="frmWord1" action="/scrabble/en_US/search.cfm" method="post" onsubmit="return _CF_checkfrmWord1(this)">
+				<div class="fillcontent">
+					<input name="word" type="text" onfocus="select(this);"  id="word"  class="field"  />
+				</div>
+				<div class="gohint">
+					<input name="searchbutton" id="searchbutton"  type="image" onclick="document.frmWord1.submit();"  class="searchbutton"  src="/scrabble/images/generic/brand/btn_go.gif"  />
+					<a href="javascript:basicPopup('/scrabble/en_US/wordBuilderHints.html','350','200','20','20');">Hints</a>
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+
+	<br />
+	<div id="dictionary"><p>
+	
+					<p><b>UGLY <span style='font-size: 9px; margin-left: 15px;'>[8 pts]</span> , (UGLIER/UGLIEST) </b> <br /><br />displeasing to the sight --uGLILY</p>
+				
+					<p><b>UGLY <span style='font-size: 9px; margin-left: 15px;'>[8 pts]</span> , (UGLIES) </b> <br /><br />one that is ugly</p>
+				
+				<b>2</b> words found.
+
+				
+	</p></div>
+
+
+
+</div> 
+<div id="hsb_nav_hero_bottom"></div>
+
+
+
+		</div>
+	</div> 
+
+		
+	<div id="hsb_footer" >
+		<div id="hsb_footer_top"><a href="/"><img src="/scrabble/templates/images/foot/foot_logo_top.png" alt="Hasbro" title="Hasbro" id="hsb_foot_logo_top" /></a></div>
+		<div id="hsb_footer_btm">
+			<a href="/"><img src="/scrabble/templates/images/foot/foot_logo_btm.png" alt="Hasbro" title="Hasbro" id="hsb_foot_logo_btm" style="margin-bottom: 15px;" /></a>
+			<div class="pad1 takeover">
+				<a href="/worldwide/">WORLDWIDE</a> |
+				<a href="/shop/where-to-buy.cfm">WHERE TO BUY</a> |
+				<a href="http://reg.hasbro.com" target="_blank">E-MAIL UPDATES</a> |
+				<a href="/corporate/">CORPORATE</a> |
+				<a href="http://investor.hasbro.com">INVESTORS</a> |
+				<a href="/corporate/media/">MEDIA</a> |
+				<a href="/corporate/careers/">CAREERS</a> |
+				<a href="/site-map.cfm">SITE MAP</a> |
+				<a href="http://www.csr.hasbro.com/">CSR</a>
+				
+            </div>
+			<div class="pad2 takeover" style="width:780px;*width:700px;">
+            &copy; 2013 Hasbro. All rights reserved. All audio, visual and textual content on this site (including all names, characters, images, trademarks and logos) are protected by trademark, copyrights and other Intellectual Property rights owned by Hasbro or its subsidiaries, licensors, licensees, suppliers and accounts. By using this site, you agree to the <a href="/home/terms.html" target="_blank">Terms and Conditions of Use.</a>				
+			</div>
+            <div id="hsb_footer_btm_privacy" style="margin-top: -40px;" >
+           
+				 
+                  <a href="http://privacy.truste.com/privacy-seal/Hasbro,-Inc-/validation?rid=db771587-f252-4ddd-967b-55573a089b04" class="hsb_foot_spc1"><img src="/hasbro/home/truste_seal_web.jpg" /></a>
+                  
+<a href="/home/privacy.html" class="hsb_foot_spc1">Privacy Policy</a>
+                  <br /><br />
+            </div>
+			<!-- Start Super_Footer -->
+
+	
+	  <link rel="stylesheet" href="/includes/css/super_footer.css" type="text/css">	
+	  <div id="super_footer" class="takeover">	
+				
+		<div class="sp_head">Browse Toys by Category</div>
+			<ul class="footer-cat">	
+				<li><a href="/en_US/toys-games/4-years">Games & Puzzles For 4 Year Olds</a></li>	
+			
+				<li><a href="/en_US/toys-games/6-years">Games & Puzzles For 6 Year Olds </a></li>	
+			
+				<li><a href="/en_US/toys-games/10-years">Games & Puzzles For 10 Year Olds</a></li>	
+			
+				<li><a href="/en_US/toys-games/7-years">Games & Puzzles For 7 Year Olds</a></li>	
+				</ul>		<ul class="footer-cat">	
+				<li><a href="/en_US/toys-games/under-$10">Toys & Gifts under $10</a></li>	
+			
+				<li><a href="/en_US/toys-games/$10-$20">Toys & Gifts $10 - $20</a></li>	
+			
+				<li><a href="/en_US/toys-games/$20-$30">Toys & Gifts $20 - $30</a></li>	
+			
+				<li><a href="/en_US/toys-games/$50-$100">Toys & Gifts $50 - $100</a></li>	
+				</ul>		<ul class="footer-cat">	
+				<li><a href="/en_US/toys-games/puzzles">puzzles</a></li>	
+			
+				<li><a href="/en_US/toys-games/electronic-games">Electronic Games</a></li>	
+			
+				<li><a href="/en_US/toys-games/card-games">Card Games</a></li>	
+			
+				<li><a href="/en_US/toys-games/games-puzzles">Games & Puzzles</a></li>	
+				</ul>		
+	  </div>  
+    
+	
+<!-- End Super_Footer -->
+
+		</div>
+	</div>
+<!-- End Footer -->
+
+
+<!-- D4 -->
+
+
+<script language="javascript">
+
+	if (readCookie('s_lastproduct') != null && readCookie('s_lastproduct')!= ""){
+	//console.log("deleting cookie");
+	eraseCookie("s_lastproduct");
+	}
+  
+	var pa = s.pageName.split(':');
+	
+	if (pa[1] != 'us') {
+		pa[1] = "us";
+		s.pageName = pa.toString().replace(/,/g, ":");
+	}
+
+</script>
+
+
+<!-- Begin comScore Tag -->
+<script>
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b")
++ ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+<script>
+COMSCORE.beacon({
+c1:2,
+c2:"6034642 ",
+c3:"",
+c4:"",
+c5:"",
+c6:"",
+c15:""
+});
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6034642&c3=&c4=&c5=&c6=&c15=&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+<script language="JavaScript" type="text/javascript">
+<!--/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+
+<noscript><img src="http://hasbroinc.112.2o7.net/b/ss/hasbronerfdummy/1/H.22.1--NS/0" height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.22.1. -->
+<script type="text/javascript" language="JavaScript"> 
+	 
+		var brandName = "Scrabble";
+; 
+		var locale = "en_US";
+; 
+	 
+</script>
+<script type="text/javascript" src="/includes/js/retargeting_floodlight.js"></script>
+<script type="text/javascript" src="/includes/js/retargeting_mediaMinds.js"></script>
+<script type="text/javascript" src="/includes/js/retargeting_docubleclick.js"></script>
+<script type="text/javascript" src="/includes/js/floodLightOnClick.js"></script>
+</div><div style="display:block; clear:left; padding:0px; font-family:Verdana,Arial; font-size:10px; color:gray;"></div>
+		<script type="text/javascript">
+		<!--
+			var jsPageContributeMode = 'read';
+			var jsPageSessionContributeMode = 'read';
+			
+			var jsPageAuthorMode = 0;
+			var jsPageEditMode = 0;
+
+			
+			if(!commonspot)
+				var commonspot = {};
+			commonspot.csPage = {};
+			commonspot.csPage.url = '/scrabble/en_US/search.cfm';
+			
+			commonspot.csPage.id = 1655;
+			commonspot.csPage.title = 'Official SCRABBLE Players Dictionary';
+
+			commonspot.csPage.pagetype = 0;
+			commonspot.csPage.publicationState = 'Published Page';	
+			commonspot.csPage.siteRoot = '/scrabble/';
+			commonspot.csPage.subsiteRoot = '/scrabble/en_US/';			
+			commonspot.csPage.mode = jsPageSessionContributeMode;
+			commonspot.csPage.authorok = 0;
+			commonspot.csPage.approvalstatus = 0;
+			commonspot.csPage.showContainerUI = 0;
+			commonspot.csPage.requestedVersionTimestamp = '';
+			commonspot.csPage.userRights = {};
+			commonspot.csPage.userRights.isLoggedIn = 0;
+			commonspot.csPage.userRights.licensedContributor = 0;
+			commonspot.csPage.userRights.read = 1;
+			commonspot.csPage.userRights.author = 0;
+			commonspot.csPage.userRights.edit = 0;
+			commonspot.csPage.userRights.approve = 0;
+			commonspot.csPage.userRights.history = 0;
+			commonspot.csPage.userRights.design = 0;
+			commonspot.csPage.userRights.admin = 0;
+			commonspot.csPage.userRights.subsiteAdmin = 0;
+			commonspot.csPage.userRights.siteAdmin = 0;
+			commonspot.csPage.userRights.customerAdmin = 0;
+			commonspot.csPage.userRights.serverAdmin = 0;
+
+			commonspot.csPage.enabledMenuClasses = '';
+			
+			commonspot.csPage.visibleMenuClasses = '';
+
+			
+			commonspot.csPage.subsiteContext = {};
+			commonspot.csPage.subsiteContext.sitetype = 0;
+			commonspot.csPage.subsiteContext.siteid = 32;
+			commonspot.csPage.subsiteContext.subsiteid = 2;
+			commonspot.csPage.subsiteContext.siteurl = '/scrabble/';
+			commonspot.csPage.subsiteContext.subsiteurl = '/scrabble/en_US/';
+			commonspot.csPage.subsiteContext.sitename = 'scrabble';
+			commonspot.csPage.subsiteContext.subsitename = 'en_US';
+			commonspot.csPage.subsiteContext.menucontexttimestamp = '1381850812444';
+			commonspot.csPage.serveradminurl = "/commonspot/admin/";
+			if (parent.commonspot)
+				parent.commonspot.csPage = commonspot.csPage;
+			var doLviewRedirect;
+			if(parent &&
+						parent.commonspot &&
+						parent.commonspot.lview &&
+						!doLviewRedirect &&
+						parent.commonspot.lightbox &&
+						parent.commonspot.lightbox.stack.length == 0)
+			{
+			
+				commonspot.csPage.showPageSubmit = false;
+			
+				onPageArrival = function()
+				{
+					parent.commonspot.lview.currentPage.onPageArrival( commonspot.csPage );
+				};
+				onPageUnload = function()
+				{
+					parent.commonspot.lview.currentPage.onPageUnload();
+				};
+				parent.Spry.Utils.addEventListener(window, 'load', onPageArrival, false);
+				parent.Spry.Utils.addEventListener(window, 'unload', onPageUnload, false);
+			}
+		
+
+		// -->
+		</script>
+<script type="text/javascript">
+<!--
+	if (typeof parent.commonspot == 'undefined' || typeof parent.commonspot.lview == 'undefined')
+		loadNonDashboardFiles();
+	else if (parent.commonspot && typeof newWindow == 'undefined')
+	{
+		var arrFiles = 
+				[
+					{fileName: '/commonspot/javascript/lightbox/overrides.js', fileType: 'script', fileID: 'cs_overrides'},
+					{fileName: '/commonspot/javascript/lightbox/window_ref.js', fileType: 'script', fileID: 'cs_windowref'}
+				];
+		
+		loadDashboardFiles(arrFiles);
+	}	
+//-->
+</script>
+
+</body></html>
