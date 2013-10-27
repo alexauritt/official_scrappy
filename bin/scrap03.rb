@@ -7,14 +7,14 @@ Capybara.app_host = 'http://www.hasbro.com'
 
 
 class WordSearchResults
-  attr_accessor :complete, :word, :definition
+  attr_accessor :complete, :word, :definition, :points
   
   def complete?
-    false
+    complete
   end
   
   def word?
-    false
+    word
   end
 end
 
@@ -25,44 +25,62 @@ def search_for(word)
   find(:css, "#exact").set(true)
   click_button("btn_search")
 
+  results = WordSearchResults.new
+  results.complete = true
+
+  
   if word_found?(word)
-    puts "found #{word}!"
+    match_data = extract_definition
+    results.word = true
+    results.points = match_data[2]
+    results.definition = match_data[4]
   else
-    puts "could not find #{word}!"
+    results.word = false
   end
+  results
 end
 
 def word_found?(word)
   !page.has_content? "0 words found."
 end
 
-search_for('ugly')
-search_for("asdfasdfsadf")
-search_for('art')
+def extract_definition
+  
+  #SMOKE [11 pts] , (SMOKED/SMOKING/SMOKES) to emit smoke (the gaseous product of burning materials) -- SMOKABLE
 
-# res1 = WordSearchResults.new
-# res1.word = false
-# res1.complete = true
-# 
-# puts "word comp? #{res1.complete}"
-# puts "word word? #{res1.word}"
+  # will break down to...
 
+  # 1.  SMOKE
+  # 2.  11
+  # 3.  (SMOKED/SMOKING/SMOKES)
+  # 4.   to emit smoke (the gaseous product of burning materials)
+  # 5.  -- SMOKABLE
 
-# 
-# 
-# 
-# visit "/scrabble/en_US/search.cfm"
-# 
-# fill_in "dictWord", :with => "smelly"
-# find(:css, "#exact").set(true)
-# click_button("btn_search")
-# 
-# 
-# odor = page.has_content?("having an unpleasant odor")
-# other = page.has_content?("asdfasdfdsaf")
-# 
-# puts "has odor #{odor}"
-# puts "has other #{other}"
-# 
+  definition_reg_ex = /([A-Z]+) \[(\d+) pts\] , (\(\S*\))([^-]*)(-- .*)?/
+  
+  within("#dictionary") do
+    results = page.all('p', :text => /.*/)
+    word_results_string = results[1].text
+    word_results_string.match definition_reg_ex
+  end
+end
 
+def perform_sample_searches!
+  # search_for('ugly')
+  res = search_for("asdfasdfsadf")
+  puts "asdfasdf: #{res.word?}"
 
+  res = search_for('art')
+  puts "art: #{res.word?}"
+  puts "art: #{res.definition}"
+
+  res = search_for('foot')
+  puts "foot: #{res.word?}"
+  puts "foot: #{res.definition}"
+
+  res = search_for('universe')
+  puts "universal: #{res.word?}"
+  puts "universal: #{res.definition}"  
+end
+
+perform_sample_searches!
