@@ -24,10 +24,21 @@ def search_for(word)
   fill_in "dictWord", :with => word
   find(:css, "#exact").set(true)
   click_button("btn_search")
-  sleep 5  
+
+  if word_found?(word)
+    puts "found #{word}!"
+  else
+    puts "could not find #{word}!"
+  end
+end
+
+def word_found?(word)
+  !page.has_content? "0 words found."
 end
 
 search_for('ugly')
+search_for("asdfasdfsadf")
+search_for('art')
 
 # res1 = WordSearchResults.new
 # res1.word = false
