@@ -1,3 +1,4 @@
+require 'data_mapper'
 require 'capybara'
 require 'capybara/dsl'
 include Capybara::DSL
@@ -5,6 +6,17 @@ include Capybara::DSL
 Capybara.current_driver = :selenium
 Capybara.app_host = 'http://www.hasbro.com'
 
+
+class Token
+  include DataMapper::Resource
+
+  property :id,           Serial    # An auto-increment integer key
+  property :token_string, String    # A varchar type string, for short strings
+  property :is_word,      Boolean      # A text block, for longer string data.
+  property :points,       Integer
+  property :definition,   String
+  property :created_at,   DateTime  # A DateTime, for any date you might like.
+end
 
 class WordSearchResults
   attr_accessor :complete, :word, :definition, :points
@@ -83,4 +95,10 @@ def perform_sample_searches!
   puts "universal: #{res.definition}"  
 end
 
-perform_sample_searches!
+def setup_db!
+  # A Sqlite3 connection to a persistent database
+  DataMapper.setup(:default, 'sqlite://db/official_scraper.db')
+end
+
+# perform_sample_searches!
+setup_db!
