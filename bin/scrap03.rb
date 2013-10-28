@@ -1,6 +1,7 @@
+require 'logger'
+
 require 'data_mapper'
 require 'dm-migrations'
-
 
 require 'capybara'
 require 'capybara/dsl'
@@ -75,8 +76,7 @@ def extract_definition
   # 3.  (SMOKED/SMOKING/SMOKES)
   # 4.   to emit smoke (the gaseous product of burning materials)
   # 5.  -- SMOKABLE
-
-  definition_reg_ex = /([A-Z]+) \[(\d+) pts\] , (\(\S*\))([^-]*)(-- .*)?/
+  definition_reg_ex = /([A-Z]+) \[(\d+) pts\] (, \(\S*\))?([^-]*)(-- .*)?/
   
   within("#dictionary") do
     results = page.all('p', :text => /.*/)
@@ -87,20 +87,21 @@ end
 
 def perform_sample_searches!
   # search_for('ugly')
-  res = search_for("asdfasdfsadf")
-  puts "asdfasdf: #{res.word?}"
+  # res = search_for("asdfasdfsadf")
+  # puts "asdfasdf: #{res.word?}"
+  # 
+  # res = search_for('art')
+  # puts "art: #{res.word?}"
+  # puts "art: #{res.definition}"
+  # 
+  # res = search_for('foot')
+  # puts "foot: #{res.word?}"
+  # puts "foot: #{res.definition}"
 
-  res = search_for('art')
-  puts "art: #{res.word?}"
-  puts "art: #{res.definition}"
-
-  res = search_for('foot')
-  puts "foot: #{res.word?}"
-  puts "foot: #{res.definition}"
-
-  res = search_for('universe')
-  puts "universal: #{res.word?}"
-  puts "universal: #{res.definition}"  
+  res = search_for('ae')
+  
+  # puts "universal: #{res.word?}"
+  # puts "universal: #{res.definition}"  
 end
 
 def setup_db!
@@ -108,7 +109,7 @@ def setup_db!
   DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/official_scraper.db")
   
   DataMapper.finalize
-  DataMapper.auto_migrate!
+  DataMapper.auto_upgrade!
   
 end
 
@@ -129,4 +130,38 @@ def search_and_save(token)
   end
 end
 # perform_sample_searches!
-setup_db!
+
+def get_it_done!
+  setup_db!
+
+  logger = Logger.new('log/search_history.log')
+
+  letters = ('A' .. 'Z').to_a
+  # logger.info "Beginning Two Letter Search.."
+  # 
+  # letters.each do |letter_1|
+  #   letters.each do |letter_2|
+  #     token = letter_1 + letter_2
+  #     search_and_save(token)
+  #     logger.info "finished #{token}"
+  #   end
+  # end
+  
+  logger.info "Beginning Three Letter Search"
+  letters.each do |letter_1|
+    letters.each do |letter_2|
+      letters.each do |letter_3|
+        token = letter_1 + letter_2 + letter_3
+        if token > 'BCR'
+          search_and_save(token)
+          logger.info "finished #{token}"
+        end
+      end
+    end
+  end
+
+  logger.info "FINISHED!"
+end
+
+
+get_it_done!
