@@ -10,9 +10,6 @@ include Capybara::DSL
 Capybara.current_driver = :selenium
 Capybara.app_host = 'http://www.hasbro.com'
 
-
-
-
 class Token
   include DataMapper::Resource
 
@@ -22,6 +19,8 @@ class Token
   property :points,       Integer
   property :definition,   String
   property :created_at,   DateTime  # A DateTime, for any date you might like.
+
+  validates_uniqueness_of :token_string
 end
 
 
@@ -152,10 +151,10 @@ def get_it_done!
     letters.each do |letter_2|
       letters.each do |letter_3|
         token = letter_1 + letter_2 + letter_3
-        if token > 'BCR'
+        # if token > 'BCR'
           search_and_save(token)
           logger.info "finished #{token}"
-        end
+        # end
       end
     end
   end
@@ -163,5 +162,6 @@ def get_it_done!
   logger.info "FINISHED!"
 end
 
-
+# setup_db!
 get_it_done!
+puts Token.count
