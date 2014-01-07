@@ -39,25 +39,37 @@ class WordSearchResults
 end
 
 def search_for(word)
-  visit "/scrabble/en_US/search.cfm"
-  
-  fill_in "dictWord", :with => word
-  find(:css, "#exact").set(true)
-  click_button("btn_search")
-
   results = WordSearchResults.new
-  results.complete = true
 
-  
-  if word_found?(word)
-    match_data = extract_definition
-    results.word = true
-    results.points = match_data[2]
-    results.definition = match_data[4]
-  else
-    results.word = false
+  begin  
+    visit "/scrabble/en_US/search.cfm"
+    
+    fill_in "dictWord", :with => word
+    find(:css, "#exact").set(true)
+    click_button("btn_search")  
+    if valid_response_received?
+      results.complete = true
+
+      if word_found?(word)
+        match_data = extract_definition
+        results.word = true
+        results.points = match_data[2]
+        results.definition = match_data[4]
+      else
+        results.word = false
+      end
+    
+    else
+      results.complete = false
+    end
+  rescue
+    results.complete = false
   end
   results
+end
+
+def valid_response_received?
+  page.has_content? "words found."
 end
 
 def word_found?(word)
@@ -114,6 +126,12 @@ end
 
 def search_and_save(token)
   word_search_results = search_for(token)
+
+  unless word_search_results.complete?
+    puts "failed in searching for #{token}"
+    return false
+  end
+
   if (word_search_results.word?)
     Token.create(
       :token_string => token,
@@ -127,6 +145,8 @@ def search_and_save(token)
       :is_word => false
     )
   end
+
+  true
 end
 # perform_sample_searches!
 
@@ -151,8 +171,13 @@ def get_it_done!
     letters.each do |letter_2|
       letters.each do |letter_3|
         token = letter_1 + letter_2 + letter_3
-        if token > 'JCR'
-          search_and_save(token)
+        if token > 'TUJ'
+          search_successful = false
+          
+          while !search_successful
+            search_successful = search_and_save(token)
+          end
+          puts "finished with #{token}"
           logger.info "finished #{token}"
         end
       end
