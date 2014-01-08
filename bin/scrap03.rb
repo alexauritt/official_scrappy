@@ -3,6 +3,9 @@ require 'logger'
 require 'data_mapper'
 require 'dm-migrations'
 
+require './lib/token'
+require './lib/word_search_results'
+
 require 'capybara'
 require 'capybara/dsl'
 include Capybara::DSL
@@ -10,33 +13,6 @@ include Capybara::DSL
 Capybara.current_driver = :selenium
 Capybara.app_host = 'http://www.hasbro.com'
 
-class Token
-  include DataMapper::Resource
-
-  property :id,           Serial    # An auto-increment integer key
-  property :token_string, String    # A varchar type string, for short strings
-  property :is_word,      Boolean      # A text block, for longer string data.
-  property :points,       Integer
-  property :definition,   String
-  property :created_at,   DateTime  # A DateTime, for any date you might like.
-
-  validates_uniqueness_of :token_string
-end
-
-
-
-
-class WordSearchResults
-  attr_accessor :complete, :word, :definition, :points
-  
-  def complete?
-    complete
-  end
-  
-  def word?
-    word
-  end
-end
 
 def search_for(word)
   results = WordSearchResults.new
