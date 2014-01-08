@@ -171,7 +171,7 @@ def get_it_done!
     letters.each do |letter_2|
       letters.each do |letter_3|
         token = letter_1 + letter_2 + letter_3
-        if token > 'TUJ'
+        if token > 'YOU'
           search_successful = false
           
           while !search_successful
