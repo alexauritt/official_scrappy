@@ -14,34 +14,60 @@ Capybara.current_driver = :selenium
 Capybara.app_host = 'http://www.hasbro.com'
 
 
-def search_for(word)
-  results = WordSearchResults.new
+class DefinitionFetcher
+  def self.search_and_save(token)
+    word_search_results = DefinitionFetcher.search_for(token)
 
-  begin  
-    visit "/scrabble/en_US/search.cfm"
-    
-    fill_in "dictWord", :with => word
-    find(:css, "#exact").set(true)
-    click_button("btn_search")  
-    if valid_response_received?
-      results.complete = true
+    unless word_search_results.complete?
+      puts "failed in searching for #{token}"
+      return false
+    end
 
-      if word_found?(word)
-        match_data = extract_definition
-        results.word = true
-        results.points = match_data[2]
-        results.definition = match_data[4]
-      else
-        results.word = false
-      end
-    
+    if (word_search_results.word?)
+      Token.create(
+        :token_string => token,
+        :is_word => true,
+        :points => word_search_results.points,
+        :definition => word_search_results.definition
+      )
     else
+      Token.create(
+        :token_string => token,
+        :is_word => false
+      )
+    end
+    true
+  end
+
+  def self.search_for(word)
+    results = WordSearchResults.new
+
+    begin  
+      visit "/scrabble/en_US/search.cfm"
+      
+      fill_in "dictWord", :with => word
+      find(:css, "#exact").set(true)
+      click_button("btn_search")  
+      if valid_response_received?
+        results.complete = true
+
+        if word_found?(word)
+          match_data = extract_definition
+          results.word = true
+          results.points = match_data[2]
+          results.definition = match_data[4]
+        else
+          results.word = false
+        end
+      
+      else
+        results.complete = false
+      end
+    rescue
       results.complete = false
     end
-  rescue
-    results.complete = false
+    results
   end
-  results
 end
 
 def valid_response_received?
@@ -72,24 +98,6 @@ def extract_definition
   end
 end
 
-def perform_sample_searches!
-  # search_for('ugly')
-  # res = search_for("asdfasdfsadf")
-  # puts "asdfasdf: #{res.word?}"
-  # 
-  # res = search_for('art')
-  # puts "art: #{res.word?}"
-  # puts "art: #{res.definition}"
-  # 
-  # res = search_for('foot')
-  # puts "foot: #{res.word?}"
-  # puts "foot: #{res.definition}"
-
-  res = search_for('ae')
-  
-  # puts "universal: #{res.word?}"
-  # puts "universal: #{res.definition}"  
-end
 
 def setup_db!
   # A Sqlite3 connection to a persistent database
@@ -100,31 +108,6 @@ def setup_db!
   
 end
 
-def search_and_save(token)
-  word_search_results = search_for(token)
-
-  unless word_search_results.complete?
-    puts "failed in searching for #{token}"
-    return false
-  end
-
-  if (word_search_results.word?)
-    Token.create(
-      :token_string => token,
-      :is_word => true,
-      :points => word_search_results.points,
-      :definition => word_search_results.definition
-    )
-  else
-    Token.create(
-      :token_string => token,
-      :is_word => false
-    )
-  end
-
-  true
-end
-# perform_sample_searches!
 
 def get_it_done!
   setup_db!
@@ -151,7 +134,7 @@ def get_it_done!
           search_successful = false
           
           while !search_successful
-            search_successful = search_and_save(token)
+            search_successful = DefinitionFetcher.search_and_save(token)
           end
           puts "finished with #{token}"
           logger.info "finished #{token}"
