@@ -14,7 +14,7 @@ module TokenScraping
         puts "failed in searching for #{token}"
         return false
       end
-
+    
       if (word_search_results.word?)
         Token.create(
           :token_string => token,
@@ -22,12 +22,14 @@ module TokenScraping
           :points => word_search_results.points,
           :definition => word_search_results.definition
         )
+    
       else
         Token.create(
           :token_string => token,
           :is_word => false
         )
       end
+
       true
     end
 

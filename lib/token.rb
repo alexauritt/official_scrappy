@@ -5,7 +5,7 @@ class Token
   property :token_string, String    # A varchar type string, for short strings
   property :is_word,      Boolean      # A text block, for longer string data.
   property :points,       Integer
-  property :definition,   String
+  property :definition,   String, :length => 300
   property :created_at,   DateTime  # A DateTime, for any date you might like.
 
   validates_uniqueness_of :token_string

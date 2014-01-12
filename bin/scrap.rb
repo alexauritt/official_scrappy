@@ -13,14 +13,14 @@ def get_it_done!
 
   letters = ('A' .. 'Z').to_a
   # logger.info "Beginning Two Letter Search.."
-  # 
-  # letters.each do |letter_1|
-  #   letters.each do |letter_2|
-  #     token = letter_1 + letter_2
-  #     search_and_save(token)
-  #     logger.info "finished #{token}"
-  #   end
-  # end
+  
+  letters.each do |letter_1|
+    letters.each do |letter_2|
+      token = letter_1 + letter_2
+      search_and_save(token)
+      logger.info "finished #{token}"
+    end
+  end
   
   logger.info "Beginning Three Letter Search"
   letters.each do |letter_1|
