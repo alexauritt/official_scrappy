@@ -1,24 +1,14 @@
 require 'logger'
-
-require 'data_mapper'
-require 'dm-migrations'
-
+require './lib/persistor'
 require './lib/token'
 require './lib/word_search_results'
 require './lib/definition_fetcher'
 
 
-def setup_db!
-  # A Sqlite3 connection to a persistent database
-  DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/official_scraper.db")
-  
-  DataMapper.finalize
-  DataMapper.auto_upgrade!  
-end
 
 def get_it_done!
-  setup_db!
 
+  TokenScraping::Persistor.setup_db!
   logger = Logger.new('log/search_history.log')
 
   letters = ('A' .. 'Z').to_a
