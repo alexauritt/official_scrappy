@@ -28,29 +28,33 @@ setup_db!
 letters = ('A' .. 'Z').to_a
 puts "Beginning Two Letter word Search.."
 
-# letters.each do |letter_1|
-#   letters.each do |letter_2|
-#     token = letter_1 + letter_2
-#     results = Token.all(:token_string => token)
-#     if results.count != 1
-#       puts "Found #{results.count} for #{token}"
-#     end
-#   end
-# end
+missing_tokens = []
+
+letters.each do |letter_1|
+  letters.each do |letter_2|
+    token = letter_1 + letter_2
+    results = Token.all(:token_string => token)
+    if results.count < 1
+      missing_tokens << results
+      puts "Found #{results.count} for #{token}"
+    end
+  end
+end
+
+puts "Beginning Three Letter word Search.."
 
 letters.each do |letter_1|
   letters.each do |letter_2|
     letters.each do |letter_3|
       token = letter_1 + letter_2 + letter_3
-      if token > 'UGN'
-        puts "outy"
-        return
-      end
 
       results = Token.all(:token_string => token)
-      if results.count != 1
+      if results.count < 1
+        missing_tokens << results
         puts "Found #{results.count} for #{token}"
       end
     end
   end
 end
+
+puts "#{missing_tokens}"

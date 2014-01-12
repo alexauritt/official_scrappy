@@ -7,13 +7,6 @@ require './lib/token'
 require './lib/word_search_results'
 require './lib/definition_fetcher'
 
-require 'capybara'
-require 'capybara/dsl'
-include Capybara::DSL
-
-Capybara.current_driver = :selenium
-Capybara.app_host = 'http://www.hasbro.com'
-
 
 def setup_db!
   # A Sqlite3 connection to a persistent database
@@ -48,7 +41,7 @@ def get_it_done!
           search_successful = false
           
           while !search_successful
-            search_successful = DefinitionFetcher.search_and_save(token)
+            search_successful = TokenScraping::DefinitionFetcher.search_and_save(token)
           end
           puts "finished with #{token}"
           logger.info "finished #{token}"
