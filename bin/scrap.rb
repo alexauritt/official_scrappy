@@ -5,7 +5,6 @@ require './lib/word_search_results'
 require './lib/definition_fetcher'
 
 
-
 def get_it_done!
 
   TokenScraping::Persistor.setup_db!
@@ -17,7 +16,12 @@ def get_it_done!
   letters.each do |letter_1|
     letters.each do |letter_2|
       token = letter_1 + letter_2
-      search_and_save(token)
+      search_successful = false
+      
+      while !search_successful
+        search_successful = TokenScraping::DefinitionFetcher.search_and_save(token)
+      end
+      puts "finished with #{token}"
       logger.info "finished #{token}"
     end
   end
@@ -27,15 +31,15 @@ def get_it_done!
     letters.each do |letter_2|
       letters.each do |letter_3|
         token = letter_1 + letter_2 + letter_3
-        if token > 'YOU'
-          search_successful = false
-          
-          while !search_successful
-            search_successful = TokenScraping::DefinitionFetcher.search_and_save(token)
-          end
-          puts "finished with #{token}"
-          logger.info "finished #{token}"
+        
+        search_successful = false
+        
+        while !search_successful
+          search_successful = TokenScraping::DefinitionFetcher.search_and_save(token)
         end
+        puts "finished with #{token}"
+        logger.info "finished #{token}"
+        
       end
     end
   end
