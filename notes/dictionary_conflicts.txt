@@ -1,0 +1,7 @@
+WordManager has 1392 words hardcoded into the list
+
+but Official Scrapper only pulled 1101 true words from official hasbro website.
+
+TODO: 
+	1) are all words from official scraper in WordManager list?
+	2) find all words which should be discarded from WordManager
